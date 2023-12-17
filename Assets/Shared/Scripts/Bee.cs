@@ -8,7 +8,7 @@ public class Bee : MonoBehaviour
     Rigidbody2D rb;
     float speed = 2.0f;
     Animator anm;
-    float horizontal = -1;
+    public float horizontal = -1;
     float changeDirectionTime = 3;
     float timmer;
     void Start()
