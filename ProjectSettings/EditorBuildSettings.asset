@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/BuiTruongGiang/Sence/Level2.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/NguyenDucHan/Level1.unity
+    guid: 5924b5ffdd604b24a83c62d177f711b1
+  - enabled: 1
+    path: Assets/PhamThanhTung/Level3.unity
+    guid: 2b2692362ce0c3f4192fd05045ba35c6
   m_configObjects: {}

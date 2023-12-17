@@ -39,20 +39,28 @@ public class move : MonoBehaviour
     {
         UpdateController();
         UpdateAnimation();
-        CalledNPC();
+        CallNPC();
         HeathUI.GetInstance().Change(health);
 
     }
-    void CalledNPC(){
+    void CallNPC()
+    {
+        // Xác nhận player đứng bên cạch NPC 
         RaycastHit2D hit = Physics2D.Raycast(rb.position + Vector2.up * 0.2f, look, 1.5f, LayerMask.GetMask("NPC"));
         if (hit.collider != null)
         {
             NPC character = hit.collider.GetComponent<NPC>();
             if (character != null)
             {
-                character.DisplayDialog();
+                character.DisplayDialog();// Hiển thị chatbox
+            }
+            // Chuyển màn chơi
+            if(Input.GetKeyDown(KeyCode.X))
+            {
+                character.changeScene();
             }
         }
+
     }
 
 

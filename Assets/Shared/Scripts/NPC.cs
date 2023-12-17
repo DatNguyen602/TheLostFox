@@ -1,16 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class NPC : MonoBehaviour
 {
-    public float displayTime = 4.0f;
-    public GameObject dialogBox;
+    public float displayTime = 4.0f; // thời gian hiển thị 4s
+    public GameObject dialogBox; // nơi chứa canvas
     float timerDisplay;
+    public int sceneIndex;
     
     void Start()
     {
-        dialogBox.SetActive(false);
+        dialogBox.SetActive(false); // Set ẩn vùng chat
         timerDisplay = -1.0f;
     }
     
@@ -26,9 +28,14 @@ public class NPC : MonoBehaviour
         }
     }
     
-    public void DisplayDialog()
+    public void DisplayDialog() // Hàm dùng hiển thị
     {
         timerDisplay = displayTime;
         dialogBox.SetActive(true);
+    }
+
+    public void changeScene()
+    {
+        SceneManager.LoadScene(sceneIndex);
     }
 }
