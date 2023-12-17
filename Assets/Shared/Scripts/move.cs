@@ -41,6 +41,7 @@ public class move : MonoBehaviour
         UpdateAnimation();
         CallNPC();
         HeathUI.GetInstance().Change(health);
+        
 
     }
     void CallNPC()
@@ -146,7 +147,18 @@ public class move : MonoBehaviour
             invicibleTimmer = invincibleTime;
             rb.velocity = new Vector2(0,0);
         }
+        PlayerDied(); // Nếu hết máu hiện màn hình
         Debug.Log(health);
+    }
+
+    private void PlayerDied()
+    {
+        if(health <= 0) 
+        {
+            LevelManager.instance.GameOver();
+            rb.simulated = false;
+            gameObject.SetActive(false);
+        }
     }
 
 
