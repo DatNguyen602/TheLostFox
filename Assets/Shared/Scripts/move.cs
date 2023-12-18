@@ -156,8 +156,6 @@ public class move : MonoBehaviour
         if(health <= 0) 
         {
             LevelManager.instance.GameOver();
-            rb.simulated = false;
-            gameObject.SetActive(false);
         }
     }
 
