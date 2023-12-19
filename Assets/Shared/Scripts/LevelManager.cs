@@ -8,7 +8,7 @@ public class LevelManager : MonoBehaviour // Dùng để quản lý các sự ki
 
     private void Awake()
     {
-        if (LevelManager.instance == null) instance= this;
+        if (LevelManager.instance == null) instance = this;
         else Destroy(gameObject);
     }
 
