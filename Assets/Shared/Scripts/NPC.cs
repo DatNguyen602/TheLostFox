@@ -33,9 +33,4 @@ public class NPC : MonoBehaviour
         timerDisplay = displayTime;
         dialogBox.SetActive(true);
     }
-
-    public void changeScene()
-    {
-        SceneManager.LoadScene(sceneIndex);
-    }
 }

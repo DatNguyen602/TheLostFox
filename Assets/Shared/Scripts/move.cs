@@ -20,7 +20,7 @@ public class move : MonoBehaviour
     bool isInvincible = false;
     float invincibleTime = 1;
     float invicibleTimmer;
-
+    public int sceneIndex; //Số thứ tự màn chơi
 
 
 
@@ -58,7 +58,7 @@ public class move : MonoBehaviour
             // Chuyển màn chơi
             if(Input.GetKeyDown(KeyCode.X))
             {
-                character.changeScene();
+                LevelManager.instance.LoadScene(sceneIndex);
             }
         }
 
