@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour // Dùng để quản lý các sự kiện
 {
@@ -27,5 +28,8 @@ public class LevelManager : MonoBehaviour // Dùng để quản lý các sự ki
             Debug.Log("X");
             _ui.LoadScene(sceneIndex);
         }
+    }
+    public void MainMenu(){
+        SceneManager.LoadScene(0);
     }
 }
