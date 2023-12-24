@@ -26001,6 +26001,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 4212395683391890310}
+    - target: {fileID: 2013350066624778788, guid: cdf0b907e03e82d40bdef692d908984c, type: 3}
+      propertyPath: _progressBar
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2013350066624778788, guid: cdf0b907e03e82d40bdef692d908984c, type: 3}
+      propertyPath: _loadingCanvas
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2264063163295757541, guid: cdf0b907e03e82d40bdef692d908984c, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -432.7
