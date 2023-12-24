@@ -39,7 +39,9 @@ public class Bullet : MonoBehaviour
         if(other.gameObject.tag == "Enemy") {
             Instantiate(explodePrefab, other.gameObject.transform.position, Quaternion.identity);
             Destroy(other.gameObject);
+            Sound.getInstance().PlayeEnemyDeath();
         }
+        Sound.getInstance().PlayExplode();
         Destroy(gameObject);
     }
 } 

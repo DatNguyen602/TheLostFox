@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+[DefaultExecutionOrder(-10)]
 
 public class GameConfig : MonoBehaviour
 {
@@ -9,8 +10,8 @@ public class GameConfig : MonoBehaviour
     static GameConfig instance;
     int stars = 0;
     int point = 0;
-
-
+    public move player;
+    
 
 
     

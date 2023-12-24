@@ -227,6 +227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayTime: 4
   dialogBox: {fileID: 5184724285035553036}
+  sceneIndex: 0
 --- !u!61 &6722244816306797845
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -439,7 +440,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Ch\xFAc m\u1EEBng b\u1EA1n g\u1EA5u.\n\"X\" \u0111\u1EC3 chuy\u1EC3n m\xE0n"
+  m_text: "Ch\xFAc m\u1EEBng b\u1EA1n C\xE1o.\n\"X\" \u0111\u1EC3 chuy\u1EC3n m\xE0n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}

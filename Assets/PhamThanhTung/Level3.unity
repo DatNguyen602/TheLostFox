@@ -733,6 +733,7 @@ GameObject:
   m_Component:
   - component: {fileID: 283459086}
   - component: {fileID: 283459085}
+  - component: {fileID: 283459087}
   m_Layer: 0
   m_Name: bg-clouds
   m_TagString: Untagged
@@ -786,7 +787,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 17.042303, y: 3.1019614}
+  m_Size: {x: 17.042303, y: 1.8538557}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 1
   m_WasSpriteAssigned: 1
@@ -801,12 +802,25 @@ Transform:
   m_GameObject: {fileID: 283459084}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 130.843, y: 16.3461, z: 0}
+  m_LocalPosition: {x: 130.843, y: 6.01, z: 0}
   m_LocalScale: {x: 22.776108, y: 16.562855, z: 17.452957}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 123305418}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &283459087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283459084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc80e6caf1a8d8244b32d5fe3d344b30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ratio: 0.6
 --- !u!1001 &289921070
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -138228,6 +138242,7 @@ GameObject:
   m_Component:
   - component: {fileID: 840118664}
   - component: {fileID: 840118663}
+  - component: {fileID: 840118665}
   m_Layer: 0
   m_Name: bg-trees
   m_TagString: Untagged
@@ -138302,6 +138317,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 123305418}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &840118665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 840118662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc80e6caf1a8d8244b32d5fe3d344b30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ratio: 0.3
 --- !u!4 &896709695 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3758854817644046629, guid: e9f2d4634f7aa3c45b100100a58182d8, type: 3}
@@ -138590,6 +138618,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1098637893}
   - component: {fileID: 1098637892}
+  - component: {fileID: 1098637894}
   m_Layer: 0
   m_Name: bg-mountains
   m_TagString: Untagged
@@ -138664,6 +138693,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 123305418}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1098637894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1098637891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc80e6caf1a8d8244b32d5fe3d344b30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ratio: 0.4
 --- !u!4 &1143868985 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3758854817644046629, guid: e9f2d4634f7aa3c45b100100a58182d8, type: 3}
