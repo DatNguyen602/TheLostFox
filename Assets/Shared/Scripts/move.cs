@@ -20,18 +20,22 @@ public class move : MonoBehaviour
     bool isInvincible = false;
     float invincibleTime = 1;
     float invicibleTimmer;
-
+    Vector2 startPos;
+    public int sceneIndex; //Số thứ tự màn chơi
 
 
 
 
     void Start()
     {
+        startPos = transform.position;
         health = maxHealth;
         speed = 10.0f;
         rb = GetComponent<Rigidbody2D>();
         anm = GetComponent<Animator>();
         look = new Vector2(1, 0);
+        
+        GameConfig.GetInstance().player = this;
     }
 
     // Update is called once per frame
@@ -46,7 +50,7 @@ public class move : MonoBehaviour
     }
     void CallNPC()
     {
-        // Xác nhận player đứng bên cạch NPC 
+        // Xác nhận player đứng bên cạch NPC
         RaycastHit2D hit = Physics2D.Raycast(rb.position + Vector2.up * 0.2f, look, 1.5f, LayerMask.GetMask("NPC"));
         if (hit.collider != null)
         {
@@ -58,7 +62,7 @@ public class move : MonoBehaviour
             // Chuyển màn chơi
             if(Input.GetKeyDown(KeyCode.X))
             {
-                character.changeScene();
+                LevelManager.instance.LoadScene(sceneIndex);
             }
         }
 
@@ -69,10 +73,9 @@ public class move : MonoBehaviour
     {
         if (!isOnGround())
         {
-            Debug.Log("xin cha");
             return;
         }
-       
+        Sound.getInstance().PlayJump();
         rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y + jumpPower);
 
     }
@@ -115,6 +118,7 @@ public class move : MonoBehaviour
 
     void Launch()
     {
+        Sound.getInstance().PlayShoot();
         GameObject bulletObject = Instantiate(bulletPrefab, rb.position, Quaternion.identity);
         Bullet bullet = bulletObject.GetComponent<Bullet>();
         bullet.Launch(look, 500);
@@ -142,6 +146,7 @@ public class move : MonoBehaviour
             if (isInvincible)
                 return;
             anm.SetTrigger("hurt");
+            Sound.getInstance().PlayHurt();
             health = Mathf.Clamp(health + h, 0, 100);
             isInvincible = true;
             invicibleTimmer = invincibleTime;
@@ -169,6 +174,12 @@ public class move : MonoBehaviour
     public int getMaxHealth()
     {
         return maxHealth;
+    }
+
+
+    public Vector2 getOffset()
+    {
+        return rb.position - startPos;
     }
 
 
