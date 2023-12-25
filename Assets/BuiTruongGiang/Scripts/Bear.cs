@@ -21,7 +21,7 @@ public class Bear : MonoBehaviour
     float countDown;
     float starTime = 2;
     float starCountDown;
-    int maxHealth = 20;
+    int maxHealth = 50;
     int health;
     public GameObject keyPrefab;
     public GameObject deathPrefab;
