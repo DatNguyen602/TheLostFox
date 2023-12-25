@@ -7,11 +7,12 @@ public class Door : MonoBehaviour
     // Start is called before the first frame update
 
     Vector2 endPos;
+    public int moveOffset;
     bool isOpen = false;
     float speed = 0.01f;
     void Start()
     {
-        endPos = (Vector2)transform.position + Vector2.down*20f;
+        endPos = (Vector2)transform.position + Vector2.down*moveOffset;
     }
 
     // Update is called once per frame
@@ -24,9 +25,12 @@ public class Door : MonoBehaviour
     public void Opening()
     {
         Vector2 currentPos = transform.position;
-        if(currentPos.y > endPos.y)
-        { 
-            Vector2 newPos = currentPos += Vector2.down * speed;
+        Vector2 move = endPos - currentPos;
+        move.Normalize();
+        if((Mathf.Abs(currentPos.y - endPos.y) >= 1))
+        {
+            Debug.Log(currentPos + " " + endPos);
+            Vector2 newPos = currentPos += move * speed;
             transform.position = newPos;
         }
     }
