@@ -90,7 +90,7 @@ public class Sound : MonoBehaviour
                 source.PlayOneShot(backGroundMusic1);
                 break;
             case 2:
-                source.PlayOneShot(backGroundMusic2);
+                return;
                 break;
             case 3:
                 source.PlayOneShot(backGroundMusic3);

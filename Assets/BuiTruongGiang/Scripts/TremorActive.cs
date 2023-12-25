@@ -8,7 +8,7 @@ public class TremorActive : MonoBehaviour
     // Start is called before the first frame update
     public GameObject tremorDameZonePrefab;
     Vector2 direction;
-    int numberOfTremor = 15;
+    int numberOfTremor = 20;
     float timeBetween = 0.025f;
     int tremorLeft;
     float timeLeft;
