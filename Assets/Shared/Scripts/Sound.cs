@@ -28,7 +28,10 @@ public class Sound : MonoBehaviour
     // VFXSound
     public AudioClip bulletExplode;
     public AudioClip enemyDeath;
-
+    public AudioClip bearDead;
+    public AudioClip tremor;
+    public AudioClip bear;
+    public AudioClip fireball;
 
 
 
@@ -120,4 +123,21 @@ public class Sound : MonoBehaviour
         source.PlayOneShot(playerHurt);
     }
 
+    public void PlayBearDead()
+    {
+        source.PlayOneShot(bearDead);
+    }
+
+
+    public void PlayTremor()
+    {
+        source.PlayOneShot(tremor);
+    }
+
+    public void PlayFireBall()
+    {
+        source.PlayOneShot(fireball);
+    }
+
+   
 }
