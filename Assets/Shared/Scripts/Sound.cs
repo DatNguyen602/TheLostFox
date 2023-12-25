@@ -78,8 +78,9 @@ public class Sound : MonoBehaviour
 
         
         int sceneIndex = currentScene.buildIndex;
-       
+        
 
+        source.loop = true;
         switch (sceneIndex)
         {
             case 1:
@@ -95,6 +96,7 @@ public class Sound : MonoBehaviour
                 source.PlayOneShot(backGroundMusic4);
                 break;
         }
+        source.loop = false;
 
     }
 
