@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3499361793919691867}
   - component: {fileID: 8381453461894179651}
   - component: {fileID: 8670204848060391674}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: tremor_dame_zone
   m_TagString: Untagged
   m_Icon: {fileID: 0}

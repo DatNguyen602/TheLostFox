@@ -27,6 +27,7 @@ public class Bear : MonoBehaviour
     public GameObject deathPrefab;
     bool isMeet = false;
     public GameObject bearSound;
+    public GameObject carrot;
 
 
     void Start()
@@ -70,6 +71,7 @@ public class Bear : MonoBehaviour
         starCountDown -= Time.deltaTime;
         if(starCountDown <= 0)
         {
+           
             Instantiate(startPrefab, (Vector2)transform.position + Vector2.down * 2.5f, Quaternion.identity);
             starCountDown = starTime;
         }
