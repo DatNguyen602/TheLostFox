@@ -33,8 +33,9 @@ public class Sound : MonoBehaviour
     public AudioClip bear;
     public AudioClip fireball;
     public AudioClip rockDoor;
-
-
+    public AudioClip fireBallHit;
+    public AudioClip keyPickUp;
+    public AudioClip keyUse;
 
     public static Sound getInstance()
     {
@@ -92,10 +93,10 @@ public class Sound : MonoBehaviour
                 break;
             case 2:
                 return;
-                break;
+                
             case 3:
                 source.PlayOneShot(backGroundMusic3);
-                break;
+                return;
             default:
                 source.PlayOneShot(backGroundMusic4);
                 break;
@@ -144,6 +145,21 @@ public class Sound : MonoBehaviour
     public void PlayRockDoor()
     {
         source.PlayOneShot(rockDoor);
+    }
+
+    public void PlayerFireBallHit()
+    {
+        source.PlayOneShot(fireBallHit);
+    }
+
+    public void PlayKeyPickUp()
+    {
+        source.PlayOneShot(keyPickUp);
+    }
+
+    public void PlayKeyUse() 
+    {
+        source.PlayOneShot(keyUse);
     }
    
 }

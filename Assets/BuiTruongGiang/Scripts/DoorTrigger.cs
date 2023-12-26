@@ -24,6 +24,7 @@ public class DoorTrigger : MonoBehaviour
             move player = other.GetComponent<move>();
             if(player.isHasKey())
             {
+                Sound.getInstance().PlayKeyUse();
                 OpenDoor();
                 player.useKey();
             }

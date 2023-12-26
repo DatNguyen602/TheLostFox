@@ -8,12 +8,12 @@ public class BossHealthBar : MonoBehaviour
     // Start is called before the first frame update
     public UnityEngine.UI.Image mask;
     float originalSize;
-    static BossHealthBar instance;
+    
 
     void Start()
     {
         originalSize = mask.rectTransform.rect.width;
-        instance = this;
+        
     }
 
     public void SetValue(float value)
@@ -22,8 +22,5 @@ public class BossHealthBar : MonoBehaviour
     }
 
 
-    public static  BossHealthBar getInstance()
-    {
-        return instance;
-    }
+    
 }

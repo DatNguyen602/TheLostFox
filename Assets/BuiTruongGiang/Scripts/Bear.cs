@@ -17,17 +17,18 @@ public class Bear : MonoBehaviour
     bool isMakingTremor = false;
     public GameObject fireBallPrefab;
     public GameObject startPrefab;
-    float fireBallTime = 5;
-    float countDown;
+    float fireBallTime = 10;
+    float countDown = 5;
     float starTime = 2;
     float starCountDown;
-    int maxHealth = 100;
+    int maxHealth = 30;
     int health;
     public GameObject keyPrefab;
     public GameObject deathPrefab;
     bool isMeet = false;
     public GameObject bearSound;
     public GameObject carrot;
+    public GameObject bossHealthBar;
 
 
     void Start()
@@ -43,7 +44,7 @@ public class Bear : MonoBehaviour
     {
 
 
-        if (Mathf.Abs(GetDistance()) < 1)
+        if (Mathf.Abs(GetDistance()) < 8)
         {
             bearSound.SetActive(true);
             isMeet = true;
@@ -119,7 +120,7 @@ public class Bear : MonoBehaviour
     void MakeTremor()
     {
         Sound.getInstance().PlayTremor();
-        GameObject tremorObject =  Instantiate(tremorPrefab, (Vector2)transform.position + Vector2.down * 3.5f, Quaternion.identity);
+        GameObject tremorObject =  Instantiate(tremorPrefab, (Vector2)transform.position + Vector2.down * 3.4f, Quaternion.identity);
         TremorActive tremorActive = tremorObject.GetComponent<TremorActive>();
         tremorActive.Active(new Vector2(look,0));
     }
@@ -137,21 +138,27 @@ public class Bear : MonoBehaviour
 
     void LaunchFireBall()
     {
-        GameObject fireBallObject = Instantiate(fireBallPrefab, rb.position + Vector2.down * 2f, Quaternion.identity);
+        
+        GameObject fireBallObject3 = Instantiate(fireBallPrefab, rb.position + Vector2.down * 2f, Quaternion.identity);
         Sound.getInstance().PlayFireBall();
-        FireBall fireBall = fireBallObject.GetComponent<FireBall>();
-        fireBall.Launch(GetDirection());
+        GameObject[] fireBalls = new GameObject[1] { fireBallObject3 };
+        foreach(GameObject fireBallObject in fireBalls)
+        {
+            FireBall fireBall = fireBallObject.GetComponent<FireBall>();
+            fireBall.Launch(GetDirection());
+        }
     }
     
 
     public void GetDamage(int d)
     {
+        BossHealthBar healthBar = bossHealthBar.GetComponent<BossHealthBar>();
         if (!isMeet)
             return;
         health = Mathf.Clamp(health - d, 0, maxHealth);
         if (health <= 0)
             Death();
-        BossHealthBar.getInstance().SetValue((float)health/maxHealth);
+        healthBar.SetValue((float)health/maxHealth);
     }
 
 

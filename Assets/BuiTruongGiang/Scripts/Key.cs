@@ -24,6 +24,7 @@ public class Key : MonoBehaviour
             move player = other.GetComponent<move>();
             player.getKey();
             Destroy(gameObject);
+            Sound.getInstance().PlayKeyPickUp();
         }
     }
 

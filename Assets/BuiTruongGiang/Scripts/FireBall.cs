@@ -31,6 +31,7 @@ public class FireBall : MonoBehaviour
             player.ChangeHealth(-2);
             
         }
+        Sound.getInstance().PlayerFireBallHit();
         Destroy(gameObject);
     }
 
