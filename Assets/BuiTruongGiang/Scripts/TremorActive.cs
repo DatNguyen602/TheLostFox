@@ -33,7 +33,7 @@ public class TremorActive : MonoBehaviour
             Instantiate(tremorDameZonePrefab, (Vector2)transform.position + (direction * index), Quaternion.identity);
             index++;
             timeLeft = timeBetween;
-            Debug.Log(direction);
+            
         }
         else
         {

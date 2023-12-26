@@ -29,7 +29,7 @@ public class Door : MonoBehaviour
         move.Normalize();
         if((Mathf.Abs(currentPos.y - endPos.y) >= 1))
         {
-            Debug.Log(currentPos + " " + endPos);
+            
             Vector2 newPos = currentPos += move * speed;
             transform.position = newPos;
         }
@@ -37,6 +37,7 @@ public class Door : MonoBehaviour
 
     public void Open()
     {
+        Sound.getInstance().PlayRockDoor();
         isOpen = true;
     }
 }

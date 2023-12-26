@@ -5267,7 +5267,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8875303311368344966, guid: 55bd3f70d7c4b5942b1b32696d1aa8f7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -86.19
+      value: -83.9
       objectReference: {fileID: 0}
     - target: {fileID: 8875303311368344966, guid: 55bd3f70d7c4b5942b1b32696d1aa8f7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -149618,6 +149618,10 @@ PrefabInstance:
       propertyPath: fireball
       value: 
       objectReference: {fileID: 8300000, guid: 566afe2e9b65691448f44ded28b5b97e, type: 3}
+    - target: {fileID: 7674512899475419332, guid: c4c1c3e25a23ea94baaca490fa0f0eb2, type: 3}
+      propertyPath: rockDoor
+      value: 
+      objectReference: {fileID: 8300000, guid: d5cd7ee2c232eb64aa4ebf39bf73a5f3, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

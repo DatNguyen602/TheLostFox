@@ -32,6 +32,7 @@ public class Sound : MonoBehaviour
     public AudioClip tremor;
     public AudioClip bear;
     public AudioClip fireball;
+    public AudioClip rockDoor;
 
 
 
@@ -139,5 +140,10 @@ public class Sound : MonoBehaviour
         source.PlayOneShot(fireball);
     }
 
+
+    public void PlayRockDoor()
+    {
+        source.PlayOneShot(rockDoor);
+    }
    
 }

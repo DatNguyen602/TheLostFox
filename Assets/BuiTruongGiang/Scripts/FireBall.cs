@@ -29,7 +29,7 @@ public class FireBall : MonoBehaviour
         {
             move player = collision.GetComponent<move>();
             player.ChangeHealth(-2);
-            Debug.Log("haha");
+            
         }
         Destroy(gameObject);
     }
