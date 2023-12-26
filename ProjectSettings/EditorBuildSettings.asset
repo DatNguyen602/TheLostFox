@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/NguyenXuanDat/Level4.unity
     guid: f0402489d60542640aa63e08a08cdc83
+  - enabled: 1
+    path: Assets/NguyenMinhDat/Level5.unity
+    guid: 7a024b10bf665594ebd910cab79253af
   m_configObjects: {}
