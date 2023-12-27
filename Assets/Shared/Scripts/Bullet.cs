@@ -41,6 +41,11 @@ public class Bullet : MonoBehaviour
             Destroy(other.gameObject);
             Sound.getInstance().PlayeEnemyDeath();
         }
+        else if(other.gameObject.tag =="Boss")
+        {
+            Bear bear = other.gameObject.GetComponent<Bear>();
+            bear.GetDamage(1);
+        }
         Sound.getInstance().PlayExplode();
         Destroy(gameObject);
     }

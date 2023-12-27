@@ -6,6 +6,7 @@ public class StarUI : MonoBehaviour
 {
     // Start is called before the first frame update
     public TextMeshProUGUI text;
+    public GameObject key;
     void Start()
     {
         
@@ -15,11 +16,17 @@ public class StarUI : MonoBehaviour
     void Update()
     {
         Change(GameConfig.GetInstance().GetCurrentStar());
+        ChangeKey();
     }
 
     void Change(int star)
     {
         string count = "x" + star;
         text.text = count;
+    }
+    void ChangeKey()
+    {
+        bool isHasKey = GameConfig.GetInstance().player.isHasKey();
+        key.SetActive(isHasKey);
     }
 }

@@ -723,6 +723,7 @@ GameObject:
   m_Component:
   - component: {fileID: 404327855}
   - component: {fileID: 404327856}
+  - component: {fileID: 404327857}
   m_Layer: 0
   m_Name: bg-mountains
   m_TagString: Untagged
@@ -797,6 +798,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &404327857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404327854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc80e6caf1a8d8244b32d5fe3d344b30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ratio: 0.4
 --- !u!1 &446343048
 GameObject:
   m_ObjectHideFlags: 0
@@ -23934,6 +23948,7 @@ GameObject:
   m_Component:
   - component: {fileID: 697451460}
   - component: {fileID: 697451459}
+  - component: {fileID: 697451461}
   m_Layer: 0
   m_Name: bg-trees
   m_TagString: Untagged
@@ -24008,6 +24023,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1780756923}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &697451461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 697451458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc80e6caf1a8d8244b32d5fe3d344b30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ratio: 0.2
 --- !u!1001 &800364016
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24100,6 +24128,7 @@ GameObject:
   m_Component:
   - component: {fileID: 944822392}
   - component: {fileID: 944822393}
+  - component: {fileID: 944822394}
   m_Layer: 0
   m_Name: bg-clouds
   m_TagString: Untagged
@@ -24174,6 +24203,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &944822394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 944822391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc80e6caf1a8d8244b32d5fe3d344b30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ratio: 0.6
 --- !u!1 &1012988613
 GameObject:
   m_ObjectHideFlags: 0
@@ -25382,11 +25424,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6001646136104403914, guid: ada0ec172428fb9468b73122d7e7076c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.33
+      value: 4.23
       objectReference: {fileID: 0}
     - target: {fileID: 6001646136104403914, guid: ada0ec172428fb9468b73122d7e7076c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.07
+      value: 4.61
       objectReference: {fileID: 0}
     - target: {fileID: 6001646136104403914, guid: ada0ec172428fb9468b73122d7e7076c, type: 3}
       propertyPath: m_LocalPosition.z

@@ -22,7 +22,7 @@ public class move : MonoBehaviour
     float invicibleTimmer;
     Vector2 startPos;
     public int sceneIndex; //Số thứ tự màn chơi
-
+    bool hasKey = false;
 
 
 
@@ -76,7 +76,7 @@ public class move : MonoBehaviour
             return;
         }
         Sound.getInstance().PlayJump();
-        rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y + jumpPower);
+        rb.velocity = new Vector2(rb.velocity.x,jumpPower);
 
     }
 
@@ -153,7 +153,6 @@ public class move : MonoBehaviour
             rb.velocity = new Vector2(0,0);
         }
         PlayerDied(); // Nếu hết máu hiện màn hình
-        Debug.Log(health);
     }
 
     private void PlayerDied()
@@ -180,6 +179,24 @@ public class move : MonoBehaviour
     public Vector2 getOffset()
     {
         return rb.position - startPos;
+    }
+
+
+    public bool isHasKey()
+    {
+        return hasKey;
+    }
+
+
+    public void getKey()
+    {
+        hasKey = true;
+    }
+
+
+    public void useKey() 
+    {
+        hasKey = false;
     }
 
 

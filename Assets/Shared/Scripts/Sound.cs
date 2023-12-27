@@ -28,9 +28,14 @@ public class Sound : MonoBehaviour
     // VFXSound
     public AudioClip bulletExplode;
     public AudioClip enemyDeath;
-
-
-
+    public AudioClip bearDead;
+    public AudioClip tremor;
+    public AudioClip bear;
+    public AudioClip fireball;
+    public AudioClip rockDoor;
+    public AudioClip fireBallHit;
+    public AudioClip keyPickUp;
+    public AudioClip keyUse;
 
     public static Sound getInstance()
     {
@@ -78,23 +83,25 @@ public class Sound : MonoBehaviour
 
         
         int sceneIndex = currentScene.buildIndex;
-       
+        
 
+        source.loop = true;
         switch (sceneIndex)
         {
             case 1:
                 source.PlayOneShot(backGroundMusic1);
                 break;
             case 2:
-                source.PlayOneShot(backGroundMusic2);
-                break;
+                return;
+                
             case 3:
                 source.PlayOneShot(backGroundMusic3);
-                break;
+                return;
             default:
                 source.PlayOneShot(backGroundMusic4);
                 break;
         }
+        source.loop = false;
 
     }
 
@@ -118,4 +125,41 @@ public class Sound : MonoBehaviour
         source.PlayOneShot(playerHurt);
     }
 
+    public void PlayBearDead()
+    {
+        source.PlayOneShot(bearDead);
+    }
+
+
+    public void PlayTremor()
+    {
+        source.PlayOneShot(tremor);
+    }
+
+    public void PlayFireBall()
+    {
+        source.PlayOneShot(fireball);
+    }
+
+
+    public void PlayRockDoor()
+    {
+        source.PlayOneShot(rockDoor);
+    }
+
+    public void PlayerFireBallHit()
+    {
+        source.PlayOneShot(fireBallHit);
+    }
+
+    public void PlayKeyPickUp()
+    {
+        source.PlayOneShot(keyPickUp);
+    }
+
+    public void PlayKeyUse() 
+    {
+        source.PlayOneShot(keyUse);
+    }
+   
 }

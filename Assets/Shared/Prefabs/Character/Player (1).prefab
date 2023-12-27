@@ -222,6 +222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpPower: 25
   bulletPrefab: {fileID: 7217503599138205168, guid: 164abeca60dc4914889dd32432caa7de, type: 3}
+  sceneIndex: 0
 --- !u!61 &3150557237598326072
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -25,7 +25,7 @@ public class LevelManager : MonoBehaviour // Dùng để quản lý các sự ki
     public void LoadScene(int sceneIndex){
         if (_ui != null)
         {
-            Debug.Log("X");
+            
             _ui.LoadScene(sceneIndex);
         }
     }

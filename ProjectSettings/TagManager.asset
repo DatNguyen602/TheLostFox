@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Elevator
+  - Boss
   layers:
   - Default
   - TransparentFX
@@ -18,11 +19,11 @@ TagManager:
   - Ground
   - Enemy
   - NPC
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Door
+  - Enemy Bullet
+  - Boss
+  - Draft
+  - Collective
   - 
   - 
   - 
